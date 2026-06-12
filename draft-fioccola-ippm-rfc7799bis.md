@@ -55,14 +55,14 @@ informative:
 
 --- abstract
 
-   This memo provides clear definitions for Active and Passive
-   performance assessment.  The construction of Metrics and Methods can
-   be described as either "Active" or "Passive".  Some methods may use a
-   subset of both Active and Passive attributes, and we refer to these
-   as "Hybrid Methods".  This memo also describes multiple dimensions to
-   help evaluate new methods as they emerge.
+This memo provides clear definitions for Active, Passive and Hybrid
+performance assessment.  The construction of Metrics and Methods can
+be described as either "Active" or "Passive".  Some methods use a
+subset of both Active and Passive attributes, and they can be referred
+to as "Hybrid".  This memo also describes multiple dimensions to
+help evaluate new methods as they emerge.
 
-   This memo obsoletes RFC 7799.
+This memo obsoletes RFC 7799.
 
 --- middle
 
@@ -103,15 +103,15 @@ also describes the combination of fundamental Active and Passive
 categories that are called Hybrid Methods and Metrics.
 
 The classification guidelines set in {{?RFC7799}} are used as a
-reference to position measurement methods and establish a structured approach
-to capture measurement method characteristics. Typically, a measurement method
-is first presented by indicating whether it belongs to Active/Passive/Hybrid
-category defined in {{?RFC7799}}.
+reference to position measurement methods and establish a structured
+approach to capture measurement method characteristics. Typically, a
+measurement method is first presented by indicating whether it belongs
+to Active/Passive/Hybrid category defined in {{?RFC7799}}.
 
 This memo obsoletes {{?RFC7799}}. The description of Metrics
 and Methods as "Active" or "Passive" and "Hybrid" is unchanged compared
-to {{?RFC7799}}, while the discussion about the existing methods has been
-updated. Main changes are listed in {{sec-changes}}.
+to {{?RFC7799}}, while the discussion about the existing methods has
+been updated. Main changes are listed in {{sec-changes}}.
 
 ## Conventions and Definitions
 
@@ -477,11 +477,11 @@ as Active Methods.
 
 ## Alternate-Marking
 
-{{?RFC9341}} defines a performance monitoring technique, called
-Alternate-Marking, that consists of marking the packets in order to divide
-the packet flow into batches, that are used to get coherent counters
-and timestamps in every marking period to measure the performance. It
-can be implemented by using reserved bits in the protocol header, and
+{{?RFC9341}} and {{?RFC9342}} define a performance monitoring technique,
+called Alternate-Marking, that consists of marking the packets in order
+to divide the packet flow into batches, that are used to get coherent
+counters and timestamps in every marking period to measure the performance.
+It can be implemented by using reserved bits in the protocol header, and
 the change in value of these marking bits at the domain edges (and not
 along the path) is formally considered a modification of the stream
 of interest.
@@ -535,17 +535,17 @@ single stream of interest.
 
 # Discussion of OAM Methods
 
-{{OAM}} considers some common qualifiers and modifiers that are prepended,
-within the context of packet networks, to the OAM abbreviation and lays out
-guidelines for their use in IETF documents.
+{{OAM}} considers some common qualifiers and modifiers that are
+prepended, within the context of packet networks, to the OAM
+abbreviation and lays out guidelines for their use in IETF documents.
 
 Many Operations, Administration, and Management (OAM) methods exist
 beyond the IP layer. For example, {{Y.1731}} defines several different
 measurement methods that we would classify as follows:
 
 - Loss Measurement (LM) occasionally injects frames with a count of
-  previous frames since the last LM message. Therefore, LM is classified as
-  Hybrid Type I, because this method processes a user traffic stream
+  previous frames since the last LM message. Therefore, LM is classified
+  as Hybrid Type I, because this method processes a user traffic stream
   and augments the stream of interest with frames having "fields
   which are dedicated to measurement".
 
@@ -560,7 +560,11 @@ for MPLS Loss and Delay measurement terminology, for example.
 
 # Operational Considerations
 
-TBC.
+This document has no Operational Considerations.
+
+It is expected that each document that describes a measurement method
+will include a specific Operational Considerations sections to address
+the Operations and Management aspects.
 
 # Security Considerations
 
@@ -570,8 +574,8 @@ information communicated and observed at observation and measurement
 points described above, and protocol issues to consider. We refer
 the reader to the security and privacy considerations described in
 the Large-Scale Measurement of Broadband Performance (LMAP) Framework
-{{!RFC7594}}, which covers Active and Passive measurement techniques and
-supporting material on measurement context.
+{{!RFC7594}}, which covers Active and Passive measurement techniques
+and supporting material on measurement context.
 
 
 # IANA Considerations
@@ -608,7 +612,4 @@ improvements.  Tal Mizrahi, Joachim Fabini, Greg Mirsky, and Mike
 Ackermann raised many key considerations in their Working Group Last
 Call (WGLC) reviews, based on their broad measurement experience.
 
-{{?RFC7799}} Author's:
-: Al Morton
-: AT&T Labs
-
+{{?RFC7799}} Author: Al Morton, AT&T Labs
