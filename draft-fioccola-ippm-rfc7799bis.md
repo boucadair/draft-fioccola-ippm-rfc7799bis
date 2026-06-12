@@ -31,9 +31,7 @@ author:
     fullname: Giuseppe Fioccola
     organization: Huawei Technologies
     email: giuseppe.fioccola@huawei.com
- -
-    fullname: Al Morton
-    organization: AT&T Labs
+
 
 normative:
 
